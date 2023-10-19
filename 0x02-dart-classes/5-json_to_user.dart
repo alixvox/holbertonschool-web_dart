@@ -1,4 +1,4 @@
-// 1-usertojson.dart
+// 5-json_to_user.dart
 
 class User {
   int id;
@@ -31,7 +31,7 @@ class User {
 
   @override
   String toString() {
-    return 'User(id : $id ,name: $name,  age: $age, height: $height)';
+    return 'User(id : $id ,name: $name, age: $age, height: $height)';
   }
 
 }
