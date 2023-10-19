@@ -1,0 +1,1 @@
+In this proj, I'll be learning about Dart functions!
