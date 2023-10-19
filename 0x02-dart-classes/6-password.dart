@@ -29,4 +29,10 @@ class Password {
 
     return hasUppercase && hasLowercase && hasDigits;
   }
+
+  @override
+  String toString() {
+    return 'Your Password is: $_password';
+  }
+
 }
