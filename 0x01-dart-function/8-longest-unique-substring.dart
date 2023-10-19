@@ -5,7 +5,7 @@ String longestUniqueSubstring(String str) {
   Map<String, int> charIndex = {};
 
   for (int end = 0; end < str.length; end++) {
-    if (charIndex.containsKey(str[end])) {
+    if (charIndex.containsKey(str[end]) && charIndex[str[end]]! >= start) {
       start = charIndex[str[end]]! + 1;
     }
 
