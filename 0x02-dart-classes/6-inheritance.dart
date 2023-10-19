@@ -7,7 +7,7 @@ class User extends Password {
   String name;
   int age;
   double height;
-  String user_password;
+  String _user_password;
 
   // Constructor
   User({
@@ -15,8 +15,8 @@ class User extends Password {
     required this.name,
     required this.age,
     required this.height,
-    required this.user_password,
-  }) : super(password: user_password);
+    required String user_password,
+  }) : _user_password = user_password, super(password: user_password);
 
   Map<String, dynamic> toJson() {
     return {
@@ -24,7 +24,7 @@ class User extends Password {
       'name': name,
       'age': age,
       'height': height,
-      'user_password': user_password,
+      // Removed 'user_password' from here
     };
   }
 
@@ -36,6 +36,11 @@ class User extends Password {
       height: userJson['height'].toDouble(),
       user_password: userJson['user_password'],
     );
+  }
+
+  set user_password(String value) {
+    _user_password = value;
+    password = value;  // Update the password in the Password class
   }
 
   @override
